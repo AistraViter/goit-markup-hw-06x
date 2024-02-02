@@ -390,7 +390,6 @@ button {
   width: 264px;
   height: 428px;
   background-color: white;
-  /*flex-basis: calc((100% - 72px) / 4);*/
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -403,6 +402,7 @@ button {
     gap: 24px;
     flex-wrap: wrap;
     row-gap: 64px;
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 
@@ -413,6 +413,7 @@ button {
   .team-list {
     flex-wrap: nowrap;
     justify-content: space-between;
+    flex-basis: calc((100% - 72px) / 4);
   }
 }
 
