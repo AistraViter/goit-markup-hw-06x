@@ -34,6 +34,7 @@ ul {
 }
 
 img {
+  max-width: 100%;
   display: block;
 }
 
@@ -47,18 +48,6 @@ button {
   max-width: 320px;
   margin: 0 auto;
   padding: 0 16px;
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1158px) {
-  .container {
-    max-width: 1158px;
-  }
 }
 
 .visually-hidden {
@@ -75,6 +64,10 @@ button {
 }
 
 @media (max-width: 767px) {
+  .menu-320.is-open {
+    display: block;
+  }
+
   .visually-hidden_max-width_767 {
     position: absolute;
     width: 1px;
@@ -90,6 +83,10 @@ button {
 }
 
 @media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
   .visually-hidden_min-width_768 {
     position: absolute;
     width: 1px;
@@ -116,6 +113,12 @@ button {
     clip-path: inset(100%);
     clip: rect(0, 0, 0, 0);
     border: 0;
+  }
+}
+
+@media (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
   }
 }
 
@@ -238,6 +241,12 @@ button {
   background-position: 50% 50%;
   padding-top: 188px;
   padding-bottom: 188px;
+}
+
+@media (min-resolution: 192dpi) {
+  .box {
+    background-image: url(../images/hero@2x.jpg);
+  }
 }
 
 .website-title {
@@ -721,7 +730,7 @@ button {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-window-fixed.hidden {
+.modal-window-fixed.not-is-open {
   display: none;
 }
 .modal-window {
@@ -925,10 +934,6 @@ button {
   background-color: #fcfcfc;
   border: 1px solid #434455;
   display: none;
-}
-
-.menu-320.is-open {
-  display: block;
 }
 
 /* Menue 320 */
